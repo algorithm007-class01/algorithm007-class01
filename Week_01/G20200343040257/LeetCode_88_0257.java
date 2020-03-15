@@ -1,4 +1,3 @@
-package cxl.study.leetcode;
 
 import java.util.Arrays;
 
