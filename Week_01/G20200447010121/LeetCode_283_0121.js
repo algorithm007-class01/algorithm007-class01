@@ -3,8 +3,7 @@ var moveZeroes = function(nums) {
     var i = 0; j = 0
     for(; i < nums.length; i++) {
         if(nums[i] != 0) {
-            j++
-            [nums[j], [nums[i]]] = [nums[i], nums[j]]
+            [nums[j++], nums[i]] = [nums[i], nums[j]]
         }
     }
 }
