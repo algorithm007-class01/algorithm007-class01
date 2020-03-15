@@ -1,4 +1,4 @@
-class LeetCode_5_0303 {
+class LeetCode_1_0303 {
 
     public int[] twoSum(int[] nums, int target) {
         for(int i=0; i<nums.length;i++){

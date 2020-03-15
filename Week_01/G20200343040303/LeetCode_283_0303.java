@@ -1,5 +1,5 @@
 
-public class LeetCode_6_0303 {
+public class LeetCode_283_0303 {
 
     public void solution(){
         int[] nums = {0,1,0,3,5,8};
