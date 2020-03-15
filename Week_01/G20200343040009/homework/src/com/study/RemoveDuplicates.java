@@ -6,7 +6,7 @@ package com.study;
 public class RemoveDuplicates {
     public int removeDuplicates(int[] nums) {
         if (nums == null || nums.length == 1) {
-            return nums.length;
+            return 0;
         }
 
         int i = 0, j = 1;
