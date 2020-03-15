@@ -1,6 +1,6 @@
 package G20200343030495
 
-func moveZeroes(nums []int)  {
+func moveZeroes(nums []int) {
 	length := len(nums)
 	noZeroIndex := 0
 	for currnet := 0; currnet < length; currnet++ {
