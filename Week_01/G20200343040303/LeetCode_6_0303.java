@@ -1,10 +1,6 @@
-package com.meituan.etcp;
-
-import org.junit.Test;
 
 public class LeetCode_6_0303 {
 
-    @Test
     public void solution(){
         int[] nums = {0,1,0,3,5,8};
 //        int[] nums = {1};
