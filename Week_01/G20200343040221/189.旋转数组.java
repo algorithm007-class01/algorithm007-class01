@@ -45,6 +45,7 @@
 // @lc code=start
 class Solution {
 
+    // 方法1
     public void rotate1(int[] nums, int k) {
         for (int i = 0; i < k; i++) {
             int temp = nums[nums.length - 1];
@@ -55,6 +56,7 @@ class Solution {
         }
     }
 
+    // 方法2
     public void rotate(int[] nums, int k) {
         if (nums.length == 1) {
             return;
