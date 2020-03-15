@@ -39,8 +39,8 @@ public:
     }
     /**
      * Solution 2:
-     * 用nonZeroNum记录非零数的长度，并且将非零数覆盖到nums[nonZeroNum]的数据
-     * 排除一些不需要进行覆盖的条件(nums[i]!=0 && nonZeroNum==i)
+     * > 用nonZeroNum记录非零数的长度，并且将非零数覆盖到nums[nonZeroNum]的数据
+     * > 排除一些不需要进行覆盖的条件(nums[i]!=0 && nonZeroNum==i)
     */
     void moveZeroes2(vector<int> &nums)
     {
@@ -91,10 +91,10 @@ int main()
         t4.push_back(0);
     t4.push_back(1);
     Solution solution;
-    solution.moveZeroes1(t1);
-    solution.moveZeroes1(t2);
-    solution.moveZeroes1(t3);
-    solution.moveZeroes1(t4);
+    solution.moveZeroes2(t1);
+    solution.moveZeroes2(t2);
+    solution.moveZeroes2(t3);
+    solution.moveZeroes2(t4);
     solution.traverse(t1);
     solution.traverse(t2);
     solution.traverse(t3);
