@@ -28,6 +28,47 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
+//第一种：暴力求解
+class Solution {
+    public void rotate(int[] nums, int k) {
+        k %=nums.length;
+        int temp;
+        int pre;
+        for(int i=0;i<k;i++){
+            pre=nums[nums.length-1];
+            for(int j=0;j<nums.length;j++){
+                temp=nums[j];
+                nums[j]=pre;
+                pre=temp;
+            }
+        }
+
+    }
+}
+
+//runtime:405 ms
+//memory:41.6 MB
+
+
+//第二种：另开辟一个数组，用空间换时间
+class Solution {
+    public void rotate(int[] nums, int k) {
+
+        int[] a=new int[nums.length];
+        for(int i=0;i<nums.length;i++){
+            a[(i+k)%nums.length]=nums[i];
+        }
+        for(int i=0;i<nums.length;i++){
+            nums[i]=a[i];
+        }
+    }
+}
+
+//runtime:1 ms
+//memory:42.4 MB
+
+
+//第三种
 class Solution {
     public void rotate(int[] nums, int k) {
         k%=nums.length;
