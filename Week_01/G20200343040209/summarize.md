@@ -1,4 +1,3 @@
-学习笔记
 学习总结
 
 题目：
@@ -99,3 +98,5 @@ LeetCode_move-zeroes_283
 5、如果是0，则将索引追加到列表zero_index_list尾部，同时列表zero_list_len加1
 6、如果列表变量不为0，且first_zero_index < zero_list_len,说明可以交换位置了
 7、交换nums[first_zero_index] 和 nums[index]
+
+
