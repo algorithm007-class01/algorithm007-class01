@@ -3,7 +3,7 @@
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-// 双指针进行数组满足条件的项移动
+// 双指针进行数组满足条件的项移动 时间复杂度 O(n) 空间复杂度 O(1)
 var moveZeroes = function(nums) {
   // j 记录 0 项的下标
   let j = 0;
