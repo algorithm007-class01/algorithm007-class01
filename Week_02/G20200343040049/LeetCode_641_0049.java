@@ -126,7 +126,7 @@ class MyCircularDeque {
 
     /**
      * Checks whether the circular deque is full or not.
-     * 如果节点数 > size，则队列已满。
+     * 如果节点数 >= size，则队列已满。
      */
     public boolean isFull() {
         return count >= size ? true : false;
