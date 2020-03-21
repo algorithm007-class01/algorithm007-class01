@@ -16,6 +16,7 @@
  *  1. 定义循环变量 frontNode 和 rearNode
  *      frontNode 代表第一个有效数据 Node
  *      rearNode 代表最后一个有效数据 Node
+ *      初始化 insertFront 或者 insertLast 的时候，frontNode == rearNode
  *  2. 增加 size 变量表示队列长度
  *      队列为空：size == 0
  *      队列满额：size == capacity
