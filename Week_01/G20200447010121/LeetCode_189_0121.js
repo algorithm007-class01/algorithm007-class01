@@ -6,8 +6,7 @@ var rotate = function(nums, k) {
     }
 };
 
-//局部反转法
-var rotate3 = function (nums, k) {
+var rotate = function (nums, k) {
     if (!nums || nums.length <= 1 || k <= 0) return;
     k %= nums.length;
     reverse(nums, 0, nums.length - 1);
@@ -15,7 +14,7 @@ var rotate3 = function (nums, k) {
     reverse(nums, k, nums.length - 1);
 }
 function reverse(nums, start, end) {
-    while (start < end) {
+    while(start < end) {
         let temp = nums[start];
         nums[start] = nums[end];
         nums[end] = temp;
