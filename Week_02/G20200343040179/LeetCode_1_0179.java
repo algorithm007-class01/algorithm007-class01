@@ -5,6 +5,7 @@ import java.util.Map;
 class LeetCode_1_0179 {
 
     public int[] twoSum(int[] nums, int target) {
+        
         int[] res = new int[2];
         if (nums.length < 2) {
             return res;
