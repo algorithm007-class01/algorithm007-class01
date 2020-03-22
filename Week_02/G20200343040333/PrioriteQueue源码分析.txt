@@ -1,0 +1,13 @@
+分析 Queue 和 Priority Queue 的源码
+Queue 在java中是一个队列的接口标准，其方法定义如下：
+boolean  add(E e) //将指定的元素插入此队列（如果立即可行且不会违反容量限制），在成功时返回 true，如果当前没有可用的空间，则抛出 IllegalStateException。
+E        element() //获取，但是不移除此队列的头。
+boolean  offer(E e) //将指定的元素插入此队列（如果立即可行且不会违反容量限制），当使用有容量限制的队列时，此方法通常要优于 add(E)，后者可能无法插入元素，而只是抛出一个异常。
+E        peek() //获取但不移除此队列的头；如果此队列为空，则返回 null。
+E        poll() //获取并移除此队列的头，如果此队列为空，则返回 null。
+E        remove() //获取并移除此队列的头。
+而Priority Queue 是实现Queue接口的一种优先队列 ，
+普通队列都是先进先出的，但是优先级队列是根据优先级进行确定的，优先级最高的先出队列；
+Priority Queue类似于一棵完全二叉树，其内部实现使用的是数组；
+Priority Queue在数组中其元素不一定是完全有序的，但是在出队列时，其元素是有序的；
+Priority Queue插入和删除元素时，都需要对队列中的元素进行调整，其中remove()和add()方法的时间复杂度为O(log n),而remove(Obejct obj)和contaions()方法需要O(n)时间复杂度，取对头元素只需要O(1)时间；
