@@ -1,1 +1,7 @@
 学习笔记
+用add first或add last这套新的API改写Deque的代码
+分析Queue和Priority Queue的源码
+写一个关于HashMap的小总结
+说明：对于不熟悉Java语言的同学，此项作业可选做。
+请大家将HashMap的小总结放在本周学习总结中一并提交
+
