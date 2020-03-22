@@ -58,6 +58,8 @@
 
 - Queue与PriorityQueue的jdk1.5.0源码分析.md
 
+- HashMap的jdk1.2.0源码分析
+
   
 
 > 命名规范是：**4位题目序号-题目标题.md**
