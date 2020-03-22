@@ -1,4 +1,4 @@
-package com.study;
+package com.studyWeek1;
 
 public class ListNode {
     int val;
