@@ -29,3 +29,4 @@ rebel.xml
 important.properties
 dev-local.properties
 .gitignore
+.class
