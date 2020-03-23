@@ -1,4 +1,6 @@
-class LeetCode_21_0179 {
+package Week_01.G20200343040179;
+
+class LeetCode_88_0179 {
    
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         if (nums1.length == 0 || nums2.length == 0) {
@@ -54,7 +56,7 @@ class LeetCode_21_0179 {
         int m = 3;
         int[] nums2 = { 2, 5, 6 };
         int n = 3;
-        new LeetCode_21_0179().merge(nums1, m, nums2, n);
+        new LeetCode_88_0179().merge(nums1, m, nums2, n);
     }
 
 }

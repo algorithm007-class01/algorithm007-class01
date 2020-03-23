@@ -1,3 +1,5 @@
+package Week_01.G20200343040179;
+
 class LeetCode_189_0179 {
 
     /**

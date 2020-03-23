@@ -1,3 +1,5 @@
+package Week_01.G20200343040179;
+
 class LeetCode_283_0179 {
     public void moveZeroes(int[] nums) {
         if (nums.length < 0) {

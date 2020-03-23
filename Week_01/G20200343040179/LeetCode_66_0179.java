@@ -1,4 +1,6 @@
-class LeetCode_21_0179 {
+package Week_01.G20200343040179;
+
+class LeetCode_66_0179 {
 
     public int[] plusOne(int[] digits) {
         for (int i = digits.length - 1; i >= 0; i--) {

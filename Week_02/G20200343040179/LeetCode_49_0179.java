@@ -1,3 +1,5 @@
+package Week_02.G20200343040179;
+
 import java.util.*;
 
 class LeetCode_49_0179 {
