@@ -19,7 +19,7 @@ class LeetCode_641_0179 {
     /**
      * Initialize your data structure here. Set the size of the deque to be k.
      */
-    public MyCircularDeque(int k) {
+    public LeetCode_641_0179(int k) {
         capacity = k + 1;
         arr = new int[capacity];
         front = 0;

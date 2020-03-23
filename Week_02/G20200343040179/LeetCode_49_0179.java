@@ -1,10 +1,8 @@
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 class LeetCode_49_0179 {
 
-    public int[] twoSum(int[] nums, int target) {
+    public List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> res = new ArrayList<>();
         if (strs.length <= 0) {
             return res;
