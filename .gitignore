@@ -28,3 +28,4 @@ config_center_client.log
 rebel.xml
 important.properties
 dev-local.properties
+.gitignore
