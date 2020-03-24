@@ -6,6 +6,7 @@
 // 解法
 // 遍历数组,找到第一个重复值，用下一个新值覆盖
 // 存在则return
+package G20200343040043
 func removeDuplicates(nums []int) int {
     if len(nums) == 0{
         return 0

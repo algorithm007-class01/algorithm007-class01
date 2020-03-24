@@ -5,6 +5,7 @@
 // 解法
 // hash存储遍历过的值，k为数组内的值，v为下标
 // 存在则return
+package G20200343040043
 func twoSum(nums []int, target int) []int {
     catch := make(map[int]int)
     for idx, v := range nums{
