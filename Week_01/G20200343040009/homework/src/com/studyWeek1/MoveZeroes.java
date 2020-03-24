@@ -1,4 +1,4 @@
-package com.study;
+package com.studyWeek1;
 
 /**
  * 移动零

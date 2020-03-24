@@ -1,4 +1,4 @@
-package com.study;
+package com.studyWeek1;
 
 /**
  * 盛最多水的容器
