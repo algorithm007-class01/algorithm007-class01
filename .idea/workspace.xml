@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cda6aadb-b91f-4b4d-a7cb-08ac1a27f995" name="Default" comment="" />
+    <list default="true" id="cda6aadb-b91f-4b4d-a7cb-08ac1a27f995" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_03/G20200343040003/NOTE.md" beforeDir="false" afterPath="$PROJECT_DIR$/Week_03/G20200343040003/NOTE.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,30 +14,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LeetCode_1_0003.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Week_02/G20200343040003/LeetCode_1_0003.php">
+      <file leaf-file-name="LeetCode_144_0003.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Week_03/G20200343040003/LeetCode_144_0003.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="210">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LeetCode_49_0003.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Week_02/G20200343040003/LeetCode_49_0003.php">
+      <file leaf-file-name="LeetCode_77_0003.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Week_03/G20200343040003/LeetCode_77_0003.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+            <state relative-caret-position="60">
+              <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LeetCode_641_0003.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Week_02/G20200343040003/LeetCode_641_0003.php">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="LeetCode_46_0003.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Week_03/G20200343040003/LeetCode_46_0003.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NOTE.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Week_03/G20200343040003/NOTE.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="15">
+                <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>data</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>queue</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,6 +71,11 @@
       <list>
         <option value="$PROJECT_DIR$/Week_02/G20200343040003/LeetCode_1_0003.php" />
         <option value="$PROJECT_DIR$/Week_02/G20200343040003/LeetCode_49_0003.php" />
+        <option value="$PROJECT_DIR$/Week_02/G20200343040003/LeetCode_641_0003.php" />
+        <option value="$PROJECT_DIR$/Week_03/G20200343040003/LeetCode_144_0003.php" />
+        <option value="$PROJECT_DIR$/Week_03/G20200343040003/LeetCode_77_0003.php" />
+        <option value="$PROJECT_DIR$/Week_03/G20200343040003/LeetCode_46_0003.php" />
+        <option value="$PROJECT_DIR$/Week_03/G20200343040003/NOTE.md" />
       </list>
     </option>
   </component>
@@ -77,12 +109,12 @@
             <path>
               <item name="algorithm007-class01" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithm007-class01" type="462c0819:PsiDirectoryNode" />
-              <item name="Week_02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week_03" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="algorithm007-class01" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithm007-class01" type="462c0819:PsiDirectoryNode" />
-              <item name="Week_02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week_03" type="462c0819:PsiDirectoryNode" />
               <item name="G20200343040003" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -99,6 +131,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Week_03/G20200343040003" />
       <recent name="$PROJECT_DIR$/Week_02/G20200343040003" />
     </key>
   </component>
@@ -124,37 +157,39 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584862275511</updated>
-      <workItem from="1584862277145" duration="3801000" />
+      <workItem from="1584862277145" duration="6639000" />
+      <workItem from="1585459148591" duration="3720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3801000" />
+    <option name="totallyTimeSpent" value="10359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Codota" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="right" id="Codota" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="right" id="leetcode" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="right" id="leetcode" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32948717" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948717" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,13 +199,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Week_02/G20200343040003/LeetCode_1_0003.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Week_02/G20200343040003/LeetCode_49_0003.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -179,7 +207,49 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Week_02/G20200343040003/LeetCode_641_0003.php">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="93" column="24" lean-forward="true" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week_02/G20200343040003/LeetCode_1_0003.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week_03/G20200343040003/LeetCode_144_0003.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week_03/G20200343040003/LeetCode_77_0003.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week_03/G20200343040003/NOTE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week_03/G20200343040003/LeetCode_46_0003.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
