@@ -69,5 +69,42 @@ class Solution {
         }
     }
 }
+
+// 精简
+class Solution {
+    func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+        if m == 0 {
+            nums1 = nums2
+        }
+        if n == 0{
+            return 
+        }
+        var one = 0
+        var two = 0
+        var mCount = m
+        // var nCount = n
+
+        while one < mCount && two < n{
+            if nums1[one] > nums2[two] {
+                for j in (one..<mCount).reversed() {
+                    nums1[j+1] = nums1[j]
+                }
+                nums1[one] = nums2[two]
+                mCount += 1
+                one += 1
+                two += 1
+            }else{
+                one += 1
+            }
+        }
+
+        while two < n {
+            nums1[one] = nums2[two]
+            one += 1
+            two += 1
+        }
+
+    }
+}
 // @lc code=end
 
