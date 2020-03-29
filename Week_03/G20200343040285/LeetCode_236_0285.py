@@ -90,6 +90,5 @@ class Solution(object):
             return root
         return left if left else right
 
-
 # @lc code=end
 
