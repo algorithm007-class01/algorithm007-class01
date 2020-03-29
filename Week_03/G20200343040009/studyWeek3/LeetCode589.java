@@ -1,4 +1,4 @@
-package com.studyWeek3;
+import com.studyWeek3.Node;
 
 import java.util.Collections;
 import java.util.LinkedList;

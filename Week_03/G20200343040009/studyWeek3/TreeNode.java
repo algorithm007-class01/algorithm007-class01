@@ -1,5 +1,3 @@
-package com.studyWeek3;
-
 public class TreeNode {
     int val;
     TreeNode left;

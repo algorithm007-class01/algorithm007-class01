@@ -1,10 +1,8 @@
-package com.studyWeek3;
-
 import java.util.List;
 
 public class Node {
     public int val;
-    public List<Node> children;
+    public List<com.studyWeek3.Node> children;
 
     public Node() {
     }
@@ -13,7 +11,7 @@ public class Node {
         val = _val;
     }
 
-    public Node(int _val, List<Node> _children) {
+    public Node(int _val, List<com.studyWeek3.Node> _children) {
         val = _val;
         children = _children;
     }
