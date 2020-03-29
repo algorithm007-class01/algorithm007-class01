@@ -7,6 +7,7 @@
 
 // 解法
 // 进位，如果最后一位是9，要进位在前一位再次进行加一操作，特殊特殊情况为全9时，数组空间不足
+package G20200343040043
 func plusOne(digits []int) []int {
     for i := len(digits) - 1; i >= 0; i--{
         if digits[i] < 9 {

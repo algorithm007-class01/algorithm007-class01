@@ -4,7 +4,7 @@
 
 // 解法
 // 找到第一个0，0后面的第一个非0数做替换
-
+package G20200343040043
 func moveZeroes(nums []int)  {
     zero := 0
     for idx, value := range nums{

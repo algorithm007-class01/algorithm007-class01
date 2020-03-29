@@ -1,0 +1,43 @@
+基于jdk1.8 源码阅读
+
+HashMap的数据结构（数组+链表+红黑树）
+hashMap的hash算法分三步：取key的hashCode值、高位运算、与运算（tab[i = (n - 1) & hash]) 比1.7 优化）
+hashMap没有产生hash碰撞时 按照数组取下标 存储数据或者取数据 
+碰撞时挂载链表到对应数组下标 链表长度大于8时 扩展到红黑树
+1.8 hash 优化算法：
+static final int hash(Object key) {   //jdk1.8
+     int h;
+     // h = key.hashCode() 为第一步 取hashCode值
+     // h ^ (h >>> 16)  为第二步 高位参与运算
+     return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+}
+右位移16位，高半区和低半区做异或，混合原始哈希码的高位和低位，加大低位的随机性。混合后的低位掺杂了高位的部分特征，保留了高位的信息。
+假如没有进行高位运算，那最后参与运算的永远只是取模运算的最后几位，相似性会比较大
+
+
+//默认初始容量为16，0000 0001 右移4位 0001 0000为16，主干数组的初始容量为16，而且这个数组
+//必须是2的倍数(后面说为什么是2的倍数)
+static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; // aka 16
+
+//最大容量为int的最大值除2
+static final int MAXIMUM_CAPACITY = 1 << 30;
+
+//默认加载因子为0.75
+static final float DEFAULT_LOAD_FACTOR = 0.75f;
+
+//阈值，如果主干数组上的链表的长度大于8，链表转化为红黑树
+ static final int TREEIFY_THRESHOLD = 8;
+
+//hash表扩容后，如果发现某一个红黑树的长度小于6，则会重新退化为链表
+ static final int UNTREEIFY_THRESHOLD = 6;
+
+//当hashmap容量大于64时，链表才能转成红黑树
+ static final int MIN_TREEIFY_CAPACITY = 64;
+
+//临界值=主干数组容量*负载因子
+int threshold;
+
+
+
+
+

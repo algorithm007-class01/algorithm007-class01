@@ -1,0 +1,78 @@
+第一周学习总结
+1、第一次用git 远程提交的渣渣，我也是用了两晚时间弄明白
+git的使用：
+1）创建git 账号，配置本地仓库，配置ssh-key 
+     （1）在github创建git账号
+     （2）在电脑上配置本地仓库，设置用户名和邮箱号
+           git config  --global user.name "kim(自己配置)"
+           git config  --global user.email  "邮箱号"
+    （3）检查是否存在SSH Key,用于本地仓库与github上的远程操作
+            没有需要创建一下SSH Key,
+           ssh -keygen -t rsa -C "邮箱"
+           cat id_rsa.pub 拷贝完  
+         将SSH Key串拷贝到github上的ssh key那边便可以愉快玩耍了
+ 2）在github上接受别人项目的邀请，点击fork,将整个项目复制下来，
+    在github上Clone or download下的ssh或者http地址复制下来，就可以进行push or pull,clone等操作
+    (1)把我github上的代码放到我电脑上
+         git clone https://github.com/algorithm007-class01/algorithm007-class01.git
+    (2)在本地仓库即我的电脑上修改或者增加代码，并提交到我的github上去
+        比如新建了一个文件array.c ,需要推送到github上去
+       git status //查看状态
+       git add .   //将所有文件添加入缓存中去
+       git commit  -m "first array homework" //将文件提交到本地仓库
+       git push  https://github.com/algorithm007-class01/algorithm007-class01.git  //推送到github上去
+  （3）在github将作业提交到班群作业中去，
+      点击github仓库下的pull request->new pull requst,填写好备注信息就可以提交了。
+ 
+2、关于时间复杂度一些理解
+    基础弱弱，争取自己每日积累一点算法基础，慢慢理解多一些东西
+   （1）数组的时间复杂度
+      prepend    o(1)   //从前面追加的意思吗？为什么时间复杂度是1？
+      append     o(1)
+      lookup      o(1)
+      insert        o(n)
+      delete      o(n)
+     (2) 链表的时间复杂度
+      prepend    o(1)
+      append     o(1)
+      lookup      o(n)
+      insert        o(1)
+      delete      o(1)
+     (3)二分查找时间复杂度为什么是O(logn)?
+    看视频的时候，有些东西有点难理解，时间复杂度的那四大类情况，还是有点不理解，但以后会慢慢多看几遍。
+     但有个二分查找为什么是O(logn),后来稍微理解下，
+     我们在二分查找的最坏情况下，
+     1/2n 1/4n  1/8n ...一直到1，要循环多少次才能找到目标数？
+      假设x次，可以列出等式：n(1/2)^x=1   
+                                              即，2^x=n
+                                      最后得到  x=logn 以2为底。
+  3、实战题思路
+  （1）删除排序数组中的重复项
+      注意：题中是排序的数组，就是已经排好顺序的数组。
+      思路：快慢指针
+  （2）移动零
+       思路：双指针，找不是0的数放前面，原先存储这个不是零的位置清零。
+  （3）盛最多水的容器
+       思路: 双重循环，左右夹逼法
+       关键：
+       双重循环中，下面编写i,j,便可以全部面积遍历完。但时间复杂度高。
+      for(i=0;i<heightSize-1;i++){
+        for(j=i+1;j<heightSize;j++){}
+         }
+       左右夹逼中，从左右开始移动，左右两边谁低谁移动，直到左右等于或者大于右边时。
+      
+ （4）爬楼梯
+     思路：正如老师所说，找最近重复子项
+               前提是每次可以爬1或者2个台阶       
+               如要爬3阶楼梯，就要先爬1阶或者2阶先
+               那么可以说前一次是后两次的方法和
+             n=1,1次
+             n>=2时 
+             f(n)=f(n-1)+f(n-2)
+           
+      
+        
+    
+
+
+
