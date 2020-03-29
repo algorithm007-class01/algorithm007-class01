@@ -61,7 +61,7 @@ public class TreeNode{
 
 #### 用数组存储二叉树
 
-![avatar](https://raw.githubusercontent.com/cxl123156/algorithm007-class03/master/Week_03/G20200343040257/binaryTree.jpg)  
+![avatar](https://github.com/cxl123156/algorithm007-class01/raw/master/Week_03/G20200343040257/binaryTree.jpg)  
 
 [1,2,3,4,5,null,6,null,8]  
 左子节点下标：2 * parent+1  
@@ -128,7 +128,7 @@ E-edge:边
 * 有向和无相
 * 权重（边长）或（损耗）
 
-![avatar](https://raw.githubusercontent.com/cxl123156/algorithm007-class03/master/Week_03/G20200343040257/graph.PNG)  
+![avatar](https://github.com/cxl123156/algorithm007-class01/raw/master/Week_03/G20200343040257/graph.PNG)  
 
 表示方法：  
 * 临界矩阵（二维数组）
