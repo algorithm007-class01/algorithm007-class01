@@ -1,0 +1,22 @@
+{
+    "files.autoSave": "off",
+    "python.linting.flake8Args": [
+        "--max-line-length=128"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "yapf",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "[python]": {
+        
+    },
+    "leetcode.endpoint": "leetcode-cn",
+    "leetcode.workspaceFolder": "C:\\Users\\user\\.leetcode",
+    "leetcode.defaultLanguage": "python3",
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.showCommentDescription": true,
+    "files.associations": {
+        "*.py": "python"
+    },
+    "python.pythonPath": "C:/Users/user/AppData/Local/Programs/Python/Python38/python.exe",
+    "python.dataScience.sendSelectionToInteractiveWindow": false
+}
