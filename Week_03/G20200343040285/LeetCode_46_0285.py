@@ -43,7 +43,6 @@ class Solution(object):
         tmp = []
         nums_tmp = nums[:]
         self.handle( nums,nums_tmp, tmp)
-
         return self.res
 
     def handle(self, nums, nums_tmp, tmp):
