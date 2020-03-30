@@ -66,6 +66,7 @@ class Solution(object):
         :type q: TreeNode
         :rtype: TreeNode
         """
+        
         # if not root or p.val==root.val or q.val == root.val:
         #     return root
         # if p.val < root.val >root.val:
