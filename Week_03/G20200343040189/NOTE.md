@@ -51,6 +51,7 @@ class Solution {
 - 节点的定义
 - 重复性（自相似性）
 
+##递归代码模板
 ```java
 public void recur(int level, int param){
     // terminator 递归终结条件
@@ -63,6 +64,31 @@ public void recur(int level, int param){
     // drill down 携带变量下探到下一层
     recur(level: level + 1, newParam);
     //restore current status 清理当前层的状态
+}
+```
+
+##分治代码模板
+
+```java
+public void subProblem(params...) {
+    // terminate condition
+    if (n == 1) or if (lo == hi) {
+        ...
+        return ;
+    }
+    // prepare data
+    // split into subproblems
+     n = n / 2; or mid = lo + hi / 2;
+    
+    // conquer subproblems
+    subResult1 = subProblem();
+    subResult2 = subProblem();
+    ...
+    
+    // process and generate the final result
+    finalResult = process_result(subResult1, subResult2...);
+    
+    // revert current level states
 }
 ```
 
