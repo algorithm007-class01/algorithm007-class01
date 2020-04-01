@@ -51,7 +51,7 @@ class Solution {
 - 节点的定义
 - 重复性（自相似性）
 
-##递归代码模板
+## 递归代码模板
 ```java
 public void recur(int level, int param){
     // terminator 递归终结条件
@@ -67,7 +67,7 @@ public void recur(int level, int param){
 }
 ```
 
-##分治代码模板
+## 分治代码模板
 
 ```java
 public void subProblem(params...) {
