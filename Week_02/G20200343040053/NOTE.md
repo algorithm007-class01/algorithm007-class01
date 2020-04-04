@@ -1,4 +1,4 @@
-### Week1
+### Week2
 - - - 
 #### 用新 API (add first/add last) 改写 Deque 代码
 ```java
