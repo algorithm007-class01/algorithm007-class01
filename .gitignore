@@ -25,3 +25,4 @@ nbdist/
 logs/
 *.log
 *.jbzmtmp
+.vscode
