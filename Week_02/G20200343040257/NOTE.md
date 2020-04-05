@@ -82,7 +82,8 @@ HashMap内部维护一个Node<K,V>数组table,Node实现了Map.Entry<K,V>接口M
 在put操作的时候更具Hash值在table中选择元素存放的下标，如果该位置为空将元素发在此处，如果不为空则将该位置现有元素的next指向这个新的元素。
 
 如果负载因子过小则会导致table的大小变小增加resize次数，如果负载因子过大则会导致table的大小变大如果map中存放元素不多的话会浪费内存空间。    
-初始化HashMap容量是建议设置为 (实际存放数量/0.75)+1
+初始化HashMap容量是建议设置为 (实际存放数量/0.75)+1  
+扩容：当满足该条件时进行扩容 size >= capacity * loadFactor
 ### Natural Ordering （自然排序）
 实现Comparable接口进行排序被称为类的自然排序，
 实现了Comparable接口的类可以使用Collections.sort()或Arrays.sort()对内部元素进行排序,该接口的compareTo()方法被称为natural comparison method（自然比较方法）。  

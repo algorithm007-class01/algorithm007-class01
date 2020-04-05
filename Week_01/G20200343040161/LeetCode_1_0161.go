@@ -7,10 +7,11 @@ func twoSum(nums []int, target int) []int {
 
 	data := make(map[int]int, 0)
 	for i, v := range nums {
-		if j, ok := data[target-v]; ok {
-			return []int{i, j}
+		if x, ok := data[target-v]; ok {
+			return []int{i, x}
+		} else {
+			data[v] = i
 		}
-		data[v] =i
 	}
 	return []int{}
 }

@@ -13,41 +13,44 @@
 #### 基础
 树 tree 图 graph
 #### 高级
-二叉搜索树binary search tree (red-black tree, AVL) 堆heap 并查集set 字典树trie 
+* 二叉搜索树binary search tree (red-black tree, AVL) 堆heap 并查集set 字典树trie 
 ### 特殊数据结构
+>>>
 位运算 布隆过滤器
 LRU算法
 
 ## 算法
-if-else switch --> branch
-while for loop --> Iteration
-recursion(Divide & Conquer, Backtrace)分治递归 回溯法
-search DFS BFS
-动态规划 Dynamic Programming
-二分查找
-贪心算法 Greedy
-数学 Math，几何Geometry
+
+* if-else switch --> branch
+* while for loop --> Iteration
+* recursion(Divide & Conquer, Backtrace)分治递归 回溯法
+* search DFS BFS
+* 动态规划 Dynamic Programming
+* 二分查找
+* 贪心算法 Greedy
+* 数学 Math，几何Geometry
 
 
 ## 训练准备
 
-算法最大误区------只做一遍
-至少做五遍
-五毒神掌
+* 算法最大误区------只做一遍
+* 至少做五遍
+* 五毒神掌
 
 ## 时间复杂度
-由低到高
-O(1)
-O(log(n))
-O(n)
-O(nlog(n))
-O(n^2)
-O(n^3)
-O(2^n)
+* 由低到高
+* O(1)
+* O(log(n))
+* O(n)
+* O(nlog(n))
+* O(n^2)
+* O(n^3)
+* O(2^n)
 
 ## 数据结构脑图
 **树和二叉树**
-    *二叉树*
+>>>
+    二叉树
         遍历方式
                 广度优先
                 深度优先
@@ -60,9 +63,11 @@ O(2^n)
         平衡二叉树
                 红黑树
                 AVL树
-    *哈夫曼树*
-    *字典树*
+    哈夫曼树
+    字典树
+
 **排序**
+>>>
     *O(n^2)*
             冒泡排序  原地  稳定的
             插入排序  原地  稳定的
@@ -76,6 +81,7 @@ O(2^n)
             基数排序        稳定的
             位图排序(数据必须无重复)
 **非受限线性表**
+>>>
     *顺序结构*
             数组
                 O(1)随机读取
@@ -92,6 +98,7 @@ O(2^n)
             静态链表
                 借助数组，伴随指向后继节点的指针
 **受限线性表**
+>>>
     *堆*
         小顶堆
         大顶堆

@@ -24,8 +24,9 @@ public:
                res[work[tmp]].push_back(str);
             } else {
                 vector<string> vec(1,str);
+                // 将未排序的字符串push到res vector末尾
                 res.push_back(vec);
-
+                // 记录排序完的字符串以及它在res vector中的位置，因为是res.push_back，所以在res vector的位置就是上一次push_back后面一个位置
                 work[tmp] = sub++;
             }
         }
