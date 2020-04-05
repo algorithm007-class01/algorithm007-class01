@@ -51,6 +51,7 @@ class Solution {
 - 节点的定义
 - 重复性（自相似性）
 
+## 递归代码模板
 ```java
 public void recur(int level, int param){
     // terminator 递归终结条件
@@ -66,6 +67,31 @@ public void recur(int level, int param){
 }
 ```
 
+## 分治代码模板
+
+```java
+public void subProblem(params...) {
+    // terminate condition
+    if (n == 1) or if (lo == hi) {
+        ...
+        return ;
+    }
+    // prepare data
+    // split into subproblems
+     n = n / 2; or mid = lo + hi / 2;
+    
+    // conquer subproblems
+    subResult1 = subProblem();
+    subResult2 = subProblem();
+    ...
+    
+    // process and generate the final result
+    finalResult = process_result(subResult1, subResult2...);
+    
+    // revert current level states
+}
+```
+
 
 
 ### 写好递归要考虑的事项
@@ -78,3 +104,8 @@ public void recur(int level, int param){
 6. 找到最近最简方法，将其拆解成可重复解决的问题（重复子问题）
 7. 数学归纳法思维
 
+## 分治，回溯：本质是一种特殊较为复杂的递归
+### 1.分治：
+定义：对一个问题分解为几个子问题，子问题和原问题具有相同的模式；原问题分解成的子问题可以独立求解，子问题之间没有相关性；具有分解终止条件，当问题足够小时可以直接求解；最终将子问题的解合并成原问题的解。
+### 2.回溯：
+定义：回溯法采用试错的思想，尝试分步的去解决一个问题；回溯采用最简单的递归方法来实现，在反复重复上述步骤后可能出现：找到一个可能存在的正确的答案；在尝试了所有可能的分布方法后宣告该问题没有答案。
