@@ -1,8 +1,13 @@
-学习笔记
+# -*- coding: utf-8 -*-
 
-贪心算法：找出局部最优解
-860 找零钱:
-      def lemonadeChange(bills):
+
+class Solution(object):
+    def lemonadeChange(self, bills):
+        """
+        :type bills: List[int]
+        :rtype: bool
+        """
+
         bills_map = {}
         for b in bills:
             if b == 5:
@@ -37,22 +42,6 @@
         return True
 
 
-122: 股票预测差值相加，只要下个选项大于前一个选项
-
-455: 把握好i，j位置， i在里j在外
-    def findContentChildren(self, g, s):
-        nums = 0
-        if not isinstance(g, list) or not isinstance(s, list):
-            return nums
-
-        g.sort()
-        s.sort()
-
-        i, len_i = 0, len(g)
-        j, len_j = 0, len(s)
-        while i < len_i and j < len_j:
-            if g[i] <= s[j]:
-                nums += 1
-                i += 1
-            j += 1
-        return nums
+if __name__ == '__main__':
+    s = Solution()
+    print(s.lemonadeChange([5, 10, 20]))
