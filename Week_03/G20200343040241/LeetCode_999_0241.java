@@ -1,4 +1,4 @@
-public class LeetCode_641_0241 {
+public class LeetCode_999_0241 {
 
     /*在一个 8 x 8 的棋盘上，有一个白色的车（Rook），用字符 'R' 表示。棋盘上还可能存在空方块，白色的象（Bishop）以及黑色的卒（pawn），分别用字符 '.'，'B' 和 'p' 表示。不难看出，大写字符表示的是白棋，小写字符表示的是黑棋。
 
@@ -14,45 +14,45 @@ public class LeetCode_641_0241 {
     /**
      * mysolution
      */
-    class Solution {
+    class SolutionOne {
         public int numRookCaptures(char[][] board) {
             int count = 0;
-            for(int i = 0;i < 8;i++){
-                for(int j = 0;j<8;j++){
-                    if(board[i][j] == 'R'){
+            for (int i = 0; i < 8; i++) {
+                for (int j = 0; j < 8; j++) {
+                    if (board[i][j] == 'R') {
                         //向上
-                        for(int h = i;h>=0;h--){
-                            if(board[h][j] == 'p'){
+                        for (int h = i; h >= 0; h--) {
+                            if (board[h][j] == 'p') {
                                 count++;
                                 break;
-                            }else if(board[h][j] == 'B'){
+                            } else if (board[h][j] == 'B') {
                                 break;
                             }
                         }
                         //向下
-                        for(int d = i;d<8;d++){
-                            if(board[d][j] == 'p'){
+                        for (int d = i; d < 8; d++) {
+                            if (board[d][j] == 'p') {
                                 count++;
                                 break;
-                            }else if(board[d][j] == 'B'){
+                            } else if (board[d][j] == 'B') {
                                 break;
                             }
                         }
                         //向左
-                        for(int l = j;l>=0;l--){
-                            if(board[i][l] == 'p'){
+                        for (int l = j; l >= 0; l--) {
+                            if (board[i][l] == 'p') {
                                 count++;
                                 break;
-                            }else if(board[i][l] == 'B'){
+                            } else if (board[i][l] == 'B') {
                                 break;
                             }
                         }
                         //向右
-                        for(int r = j;r<8;r++){
-                            if(board[i][r] == 'p'){
+                        for (int r = j; r < 8; r++) {
+                            if (board[i][r] == 'p') {
                                 count++;
                                 break;
-                            }else if(board[i][r] == 'B'){
+                            } else if (board[i][r] == 'B') {
                                 break;
                             }
                         }
@@ -66,18 +66,22 @@ public class LeetCode_641_0241 {
     /**
      * 优化  国际版大牛解法
      */
-    class Solution {
+    class SolutionTwo {
         int cap(char[][] b, int x, int y, int dx, int dy) {
             while (x >= 0 && x < b.length && y >= 0 && y < b[x].length && b[x][y] != 'B') {
                 if (b[x][y] == 'p') return 1;
-                x += dx; y += dy;
+                x += dx;
+                y += dy;
             }
             return 0;
         }
+
         public int numRookCaptures(char[][] b) {
             for (int i = 0; i < b.length; ++i)
                 for (int j = 0; j < b[i].length; ++j)
-                    if (b[i][j] == 'R') return cap(b,i,j,0,1)+cap(b,i,j,0,-1)+cap(b,i,j,1,0)+cap(b,i,j,-1,0);
+                    if (b[i][j] == 'R')
+                        return cap(b, i, j, 0, 1) + cap(b, i, j, 0, -1) + cap(b, i, j, 1, 0) + cap(b, i, j, -1, 0);
             return 0;
         }
     }
+}

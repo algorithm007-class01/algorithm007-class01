@@ -1,4 +1,4 @@
-public class LeetCode_641_0241 {
+public class LeetCode_105_0241 {
 
     /*根据一棵树的前序遍历与中序遍历构造二叉树。
 
@@ -52,3 +52,4 @@ public class LeetCode_641_0241 {
         }
     }
 
+}
