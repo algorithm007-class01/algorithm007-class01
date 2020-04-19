@@ -1,4 +1,7 @@
-public class LeetCode_641_0241 {
+import java.util.ArrayList;
+import java.util.List;
+
+public class LeetCode_46_0241 {
 
     /*给定一个 没有重复 数字的序列，返回其所有可能的全排列。*/
 
@@ -31,3 +34,4 @@ public class LeetCode_641_0241 {
         }
     }
 
+}
