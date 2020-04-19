@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * 1. 将target = num1 + num2 变为 num2 = target - num1，题目就变为找到符合的num2
+ * 2. 
  */
 public class LeetCode1 {
     public int[] twoSum(int[] nums, int target) {

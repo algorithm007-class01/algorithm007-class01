@@ -1,4 +1,8 @@
-public class LeetCode_641_0241 {
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class LeetCode_144_0241 {
 
     /*给定一个二叉树，返回它的 前序 遍历。 */
 
@@ -15,18 +19,18 @@ public class LeetCode_641_0241 {
     /**
      * 递归方法
      */
-    class Solution {
+    class SolutionOne {
         public List<Integer> preorderTraversal(TreeNode root) {
             List<Integer> target = new ArrayList<>();
-            preOrder(root,target);
+            preOrder(root, target);
             return target;
         }
 
-        public void preOrder(TreeNode node,List<Integer> target){
-            if(node == null) return;
+        public void preOrder(TreeNode node, List<Integer> target) {
+            if (node == null) return;
             target.add(node.val);
-            preOrder(node.left,target);
-            preOrder(node.right,target);
+            preOrder(node.left, target);
+            preOrder(node.right, target);
         }
     }
 
@@ -35,7 +39,7 @@ public class LeetCode_641_0241 {
      * 时间复杂度：O(N)
      * 空间复杂度：O(N)
      */
-    class Solution {
+    class SolutionTwo {
         public List<Integer> preorderTraversal(TreeNode root) {
             LinkedList<TreeNode> stack = new LinkedList<>();
             LinkedList<Integer> output = new LinkedList<>();
@@ -58,3 +62,4 @@ public class LeetCode_641_0241 {
         }
     }
 
+}

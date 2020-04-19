@@ -1,0 +1,35 @@
+class Solution {
+   public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        Set<String> visted=new HashSet<String>();
+        Queue<String> queue=new LinkedList<String>();
+        queue.offer(beginWord);
+        visted.add(beginWord);
+        int count=0;
+        while(queue.size()>0){
+            ++count;
+            int size=queue.size();
+            for(int i=0;i<size;++i){
+                String start=queue.poll();
+                for(String s :wordList){
+                    if(visted.contains(s)) continue;
+                    if(!canCoversert(start,s))continue;
+                    if(s.equals(endWord)) return count+1;
+                    visted.add(s);
+                    queue.offer(s);
+                }
+            }
+        }
+        return 0;
+    }
+
+    private boolean canCoversert(String start, String s) {
+        if(start.length()!=s.length()) return false;
+        int count=0;
+        for(int i=0;i<start.length();i++){
+            if(start.charAt(i)!=s.charAt(i)){
+                count++;
+            }
+        }
+        return count>1? false:true;
+    }
+}
