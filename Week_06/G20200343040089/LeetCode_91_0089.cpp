@@ -7,6 +7,7 @@
 //	s[i] = '0' -> dp[i] = 0
 //	s[i] = '1' -> dp[i] = dp[i+1] + dp[i+2]
 //	s[i] = '2' && s[i+1] < '7' -> dp[i] = dp[i+1] + dp[i+2]
+
 class Solution {
 public:
     int numDecodings(string s) {

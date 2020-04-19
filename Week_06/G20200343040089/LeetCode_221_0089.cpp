@@ -4,6 +4,7 @@
 *   matrix: matrix value vector 
 * Return: maxarea
 */
+
 class Solution {
 public:
     int maximalSquare(vector<vector<char>>& matrix) {
