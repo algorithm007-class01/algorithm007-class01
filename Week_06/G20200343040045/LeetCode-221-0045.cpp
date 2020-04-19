@@ -14,7 +14,7 @@ using namespace std;
 class Solution {
    public:
     int maximalSquare(vector<vector<char>>& matrix) {
-        int rows = matrix.size(), cols = matrix[0].size();
+        int rows = matrix.size(), cols = rows > 0 ? matrix[0].size() : 0;
         vector<vector<int>> dp(rows + 1, vector<int>(cols + 1, 0));
         int ans = 0;
         for (int i = 1; i <= rows; ++i) {
