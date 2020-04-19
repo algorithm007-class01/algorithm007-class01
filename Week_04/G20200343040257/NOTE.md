@@ -2,7 +2,7 @@
 
 ## 第9课 DFS BFS
 
-模版代码
+深度优先搜索模版代码
 ````
 public class DFSTemplate {
 
