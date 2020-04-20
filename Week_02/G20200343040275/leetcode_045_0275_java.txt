@@ -1,0 +1,23 @@
+class Solution {
+    public int trap(int[] height) {
+        //开头跟结尾没有水
+        int sum=0;
+        for(int i=1;i<height.length-1;i++){
+          //找出左边最高
+          int max_left=0;
+          for(int j=i-1;j>=0;j--){
+              max_left=Math.max(max_left,height[j]);
+          }
+          //找出右边最高
+          int max_right=0;
+          for(int j=i+1;j<height.length;j++){
+              max_right=Math.max(max_right,height[j]);
+          }
+          int min_height=Math.min(max_left,max_right);
+          if(height[i]<min_height){
+              sum=sum+min_height-height[i];
+          }
+      }
+        return sum;
+    }
+}
