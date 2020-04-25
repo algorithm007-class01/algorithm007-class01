@@ -11,12 +11,13 @@
 // 在所有相邻单词中，需要判断是否合法，是否已经存入深度集合（是否访问）
 // 遍历符合要求的新单词，存储相邻关系，和对应深度。判断是否和目标单词相等，然后入队列准备处理
 // 全部处理完成之后，得到一个深度集合，一个相邻关系表
-// 
-
-// DFS 
+// DFS
 // 利用相邻关系表，获取到下一级的单词，判断两个单词深度相差是否为一
 // 如果差为 1，则继续递归查询
 // 为什么会出现差不为一的情况.相邻关系表中只是保证合法性，层级相邻说明是最短路径
+
+
+// 当初使用 BFS 算法，会比 DFS + BFS 慢很多
 
 
 
@@ -47,6 +48,7 @@ class Solution {
     }
 
     private func bfs(_ beginWord: String, _ endWord: String, _ dictionary: inout Set<String>, _ distance: inout [String: Int], _ neighbors: inout [String: [String]]) {
+        // 初始化所有单词的临近关系，保证在 DFS 查路径时不为空
         for word in dictionary {
             neighbors[word] = [String]()
         }
@@ -119,6 +121,9 @@ class Solution {
 
 
 // 方法二
+// 优化一： 数组换成 Set,没有通过
+// 优化二： 从 wordList 里 remove ，有明显提高，但是还没有通过
+// 优化三： 新增 Int 和 String Extension。通过，时间接近 4000ms
 class Solution {
     func findLadders(_ beginWord: String, _ endWord: String, _ wordList: [String]) -> [[String]] {
         var res:[[String]] = [[String]]()
@@ -135,8 +140,9 @@ class Solution {
         while (paths.count != 0)
         {
             var t = paths.removeFirst()
-            if t.count > level
-            {
+                // 相当于 subVisited 保存的是所有临近单词
+                // 大于表示进入了下一层，需要把当前这层的 word 都删去，也就是 visited 
+            if t.count > level{
                 for w in words{dict.remove(w)}
                 words = Set<String>()
                 level = t.count
@@ -151,17 +157,24 @@ class Solution {
                     newLast[i] = ch.ASCII
                     if !dict.contains(newLast){continue}
                     words.insert(newLast)
-                    var nextPath = t
-                    nextPath.append(newLast)
-                    if newLast == endWord
-                    {
-                        res.append(nextPath)
+                    if newLast == endWord{
+                        res.append(t+[newLast])
                         minLevel = level
+                    }else{
+                        paths.append(t+[newLast])
                     }
-                    else
-                    {
-                        paths.append(nextPath)
-                    }
+                    // 这种写法并不能通过测试
+                    // if diction.contains(new) {
+                        //     if new == endWord {
+                        //     ans.append(words+[new])
+                        //     // found = true
+                        //     minLevel = level
+                        //     }else   {
+                            
+                        //     stack.append(words+[new])
+                        //     }
+                        // }
+
                 }
             }
         }
