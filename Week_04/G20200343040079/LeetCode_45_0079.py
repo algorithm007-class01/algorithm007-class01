@@ -27,6 +27,7 @@ from typing import List
 class Solution:
     def jump(self, nums: List[int]) -> int:
         # 这个题目, 重点在于理解每一个阶段的动作
+        # todo 边界情况需要考虑
         if len(nums) <= 1: return 0
 
         end = max_far = 0
