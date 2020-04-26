@@ -23,4 +23,21 @@ public class LeetCode94 {
         }
         return res;
     }
+
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> results = new ArrayList<>();
+        results.add(new ArrayList<>());
+        for (int num : nums) {
+            List<List<Integer>> plusNumbers = new ArrayList<>();
+            for (List<Integer> result : results) {
+                List<Integer> newNumber = new ArrayList<>(result);
+                newNumber.add(num);
+                plusNumbers.add(newNumber);
+            }
+            results.addAll(plusNumbers);
+        }
+        return results;
+    }
+
+
 }
