@@ -66,28 +66,28 @@ class Solution:
         #     cnt += 1
         # return 0
 
-        # 解法1.1 广度优先遍历BFS
-        if not wordList: return 0
-        from collections import defaultdict
-        commb = defaultdict(list)
-        for word in wordList:
-            for i in range(len(word)):
-                commb[word[:i] + '*' + word[i+1:]].append(word)
-
-        from collections import deque
-        queue = deque([beginWord])
-        level = 0
-        while queue:
-            level += 1
-            for _ in range(len(queue)):
-                word = queue.popleft()
-                if word == endWord: return level
-                for i in range(len(word)):
-                    new = word[:i] + '*' + word[i+1:]
-                    if new in commb:
-                        queue.extend(commb[new])
-                        commb[new] = []
-        return 0
+        # # 解法1.1 广度优先遍历BFS
+        # if not wordList: return 0
+        # from collections import defaultdict
+        # commb = defaultdict(list)
+        # for word in wordList:
+        #     for i in range(len(word)):
+        #         commb[word[:i] + '*' + word[i+1:]].append(word)
+        #
+        # from collections import deque
+        # queue = deque([beginWord])
+        # level = 0
+        # while queue:
+        #     level += 1
+        #     for _ in range(len(queue)):
+        #         word = queue.popleft()
+        #         if word == endWord: return level
+        #         for i in range(len(word)):
+        #             new = word[:i] + '*' + word[i+1:]
+        #             if new in commb:
+        #                 queue.extend(commb[new])
+        #                 commb[new] = []
+        # return 0
 
         # # 解法2 深度优先遍历Depth first search
         # # 有 bug, 超时跑不出来结果
@@ -118,6 +118,31 @@ class Solution:
         # ans = 0
         # _dfs(1, beginWord)
         # return ans
+
+        # 解法3 双向BFS, two-end bfs
+        if not wordList: return 0
+        wordList = set(wordList)
+        if endWord not in wordList: return 0
+
+        import string
+        f, b = {beginWord}, {endWord}   # front, back
+        level = 1
+        while f:
+            new_f = set()
+            level += 1
+            for word in f:
+                for i in range(len(word)):
+                    for c in string.ascii_lowercase:
+                        new_word = word[:i] + c + word[i+1:]
+                        if new_word in b:
+                            return level
+                        if new_word in wordList:
+                            new_f.add(new_word)
+                            wordList.remove(new_word)   # 相当于visited了
+            f = new_f
+            if len(f) > len(b):
+                f, b = b, f
+        return 0
 
 
 res = Solution().ladderLength("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"])
