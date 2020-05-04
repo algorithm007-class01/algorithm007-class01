@@ -69,27 +69,27 @@ class Solution:
         #     cnt += 1
         # return -1
 
-        # 解法1.1
-        if not bank or end not in bank: return -1
-        from collections import defaultdict
-        # 生成commb
-        commb = defaultdict(list)
-        for s in bank:
-            for i in range(len(s)):
-                commb[s[:i] + '*' + s[i + 1:]].append(s)
-        from collections import deque
-        queue = deque([start])
-        level = 0
-        while queue:
-            for _ in range(len(queue)):
-                s = queue.popleft()
-                if s == end: return level
-                for i in range(len(s)):
-                    new = s[:i] + '*' + s[i + 1:]
-                    queue.extend(commb[new])
-                    commb[new] = []     # remove遍历过的元素
-            level += 1
-        return -1
+        # # 解法1.1
+        # if not bank or end not in bank: return -1
+        # from collections import defaultdict
+        # # 生成commb
+        # commb = defaultdict(list)
+        # for s in bank:
+        #     for i in range(len(s)):
+        #         commb[s[:i] + '*' + s[i + 1:]].append(s)
+        # from collections import deque
+        # queue = deque([start])
+        # level = 0
+        # while queue:
+        #     for _ in range(len(queue)):
+        #         s = queue.popleft()
+        #         if s == end: return level
+        #         for i in range(len(s)):
+        #             new = s[:i] + '*' + s[i + 1:]
+        #             queue.extend(commb[new])
+        #             commb[new] = []     # remove遍历过的元素
+        #     level += 1
+        # return -1
 
         # # 解法2 深度优先遍历DFS
         # # 有 bug, 超时跑不出来结果
@@ -114,6 +114,31 @@ class Solution:
         # ans = -1
         # _dfs(0, start)
         # return ans
+
+        # 解法3 two-end BFS, 双向BFS
+        if not bank: return -1
+        bank = set(bank)
+        if end not in bank: return -1
+
+        f, b = {start}, {end}
+        level = 1
+        while f:
+            new_f = set()
+            for s in f:
+                for i in range(len(s)):
+                    for ch in ['A', 'C', 'G', 'T']:
+                        new_s = s[:i] + ch + s[i+1:]
+                        if new_s in b:
+                            return level
+                        if new_s in bank:
+                            new_f.add(new_s)
+                            bank.remove(new_s)
+            f = new_f
+            level += 1
+            if len(f) > len(b):
+                f, b = b, f
+        return -1
+
 
 
 res = Solution().minMutation("AAAAACCC", "AACCCCCC", ["AAAACCCC", "AAACCCCC", "AACCCCCC"])

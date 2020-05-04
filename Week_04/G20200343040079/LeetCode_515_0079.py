@@ -39,13 +39,13 @@ class Solution:
         # q = deque([root])
         # ans = []
         # while q:
-        #     tmp = None
+        #     homework = None
         #     for _ in range(len(q)):
         #         node = q.popleft()
-        #         tmp = node.val if tmp is None else max(tmp, node.val)
+        #         homework = node.val if homework is None else max(homework, node.val)
         #         if node.left: q.append(node.left)
         #         if node.right: q.append(node.right)
-        #     ans.append(tmp)
+        #     ans.append(homework)
         # return ans
 
         # # 解法1.1 BFS
