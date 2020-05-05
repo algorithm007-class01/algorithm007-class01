@@ -50,7 +50,7 @@ x % 2 == 0 —> (x & 1) == 0
 
 布隆过滤器（Bloom Filter）的核心实现是一个超大的位数组和几个哈希函数。假设位数组的长度为m，哈希函数的个数为k。  
 
-![alt 布隆过滤器实现](/Users/chenxianglin/IdeaProjects/algorithm007-class01/Week_08/G20200343040257/bloomfilter.png "布隆过滤器实现")
+![alt 布隆过滤器实现](https://raw.githubusercontent.com/cxl123156/algorithm007-class01/master/Week_08/G20200343040257/bloomfilter.png "布隆过滤器实现")
 
 以上图为例，具体的操作流程：假设集合里面有3个元素{x, y, z}，哈希函数的个数为3。首先将位数组进行初始化，将里面每个位都设置位0。
 对于集合里面的每一个元素，将元素依次通过3个哈希函数进行映射，每次映射都会产生一个哈希值，这个值对应位数组上面的一个点，
@@ -82,7 +82,7 @@ least recent used 最近最少被使用
 
 ### 原理
 
-![alt LRU Cache原理](/Users/chenxianglin/IdeaProjects/algorithm007-class01/Week_08/G20200343040257/LRUCache.png "LRU Cache原理")
+![alt LRU Cache原理](https://github.com/cxl123156/algorithm007-class01/raw/master/Week_08/G20200343040257/LRUCache.png "LRU Cache原理")
 
 ### 替换策略
 
@@ -99,10 +99,10 @@ least recent used 最近最少被使用
 2. 非比较类排序： 不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。
 
 ### 常见排序算法和时间复杂度
-![alt 排序算法](/Users/chenxianglin/IdeaProjects/algorithm007-class01/Week_08/G20200343040257/sort1.png "常见排序算法")
+![alt 排序算法](https://github.com/cxl123156/algorithm007-class01/raw/master/Week_08/G20200343040257/sort1.png "常见排序算法")
 
 
-![alt 常见排序算法对比](/Users/chenxianglin/IdeaProjects/algorithm007-class01/Week_08/G20200343040257/sort2.jpeg "常见排序算法对比")
+![alt 常见排序算法对比](https://github.com/cxl123156/algorithm007-class01/raw/master/Week_08/G20200343040257/sort2.jpeg "常见排序算法对比")
 
 ### 初级排序 - O(n^2)
 1. 选择排序（Selection Sort）
