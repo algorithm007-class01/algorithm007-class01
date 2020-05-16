@@ -45,13 +45,30 @@ class Solution:
         #     nums[(i + k) % count] = num
         # return
 
-        # 解法2: 三次翻转
+        # # 解法2: 三次翻转
+        # if k <= 0: return
+        # n = len(nums)
+        # k = k % n
+        # self.reverse(nums, 0, n - k - 1)
+        # self.reverse(nums, n - k, n - 1)
+        # self.reverse(nums, 0, n - 1)
+        # return
+
+        # 解法2.1 三次旋转, 先大范围旋转, 再小范围旋转
         if k <= 0: return
-        n = len(nums)
-        k = k % n
-        self.reverse(nums, 0, n - k - 1)
-        self.reverse(nums, n - k, n - 1)
-        self.reverse(nums, 0, n - 1)
+        k %= len(nums)
+
+        def _reverse(s, e):
+            if s >= e: return
+            while s < e:
+                nums[s], nums[e] = nums[e], nums[s]
+                s += 1
+                e -= 1
+            return
+
+        _reverse(0, len(nums) - 1)
+        _reverse(0, k - 1)
+        _reverse(k, len(nums) - 1)
         return
 
     def reverse(self, nums, i, j):

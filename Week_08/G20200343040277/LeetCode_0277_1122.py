@@ -1,0 +1,22 @@
+#1122 数组的相对排序
+# 给你两个数组，arr1 和arr2
+#
+from typing import List
+
+
+class Solution:
+    def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
+        arr = [0 for _ in range(1001)]
+        ans = []  # 数组
+        for i in range(len(arr1)):
+            arr[arr1[i]] += 1
+        for i in range(len(arr2)):
+            while arr[arr2[i]] > 0:
+                ans.append(arr2[i])
+                arr[arr2[i]] -= 1
+        for i in range(len(arr)):
+            while arr[i] > 0:
+                ans.append(i)
+                arr[i] -= 1
+        return ans
+    relativeSortArray(object,[222],[2])

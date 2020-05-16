@@ -1,0 +1,13 @@
+= window.runtime.flash.media.SoundCodec;
+
+    // data
+    air.EncryptedLocalStore = window.runtime.flash.data.EncryptedLocalStore;
+    air.SQLCollationType = window.runtime.flash.data.SQLCollationType;
+    air.SQLColumnNameStyle = window.runtime.flash.data.SQLColumnNameStyle;
+    air.SQLColumnSchema = window.runtime.flash.data.SQLColumnSchema;
+    air.SQLConnection = window.runtime.flash.data.SQLConnection;
+    air.SQLError = window.runtime.flash.errors.SQLError;
+    air.SQLErrorEvent = window.runtime.flash.events.SQLErrorEvent;
+    air.SQLErrorOperation = window.runtime.flash.errors.SQLErrorOperation;
+    air.SQLEvent = window.runtime.flash.events.SQLEvent;
+    air.SQLIndexSchema = window.runtime.flash.data.SQ
