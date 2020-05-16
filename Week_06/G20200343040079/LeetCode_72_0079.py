@@ -35,8 +35,8 @@ exection -> execution (insert 'u')
 
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
-        # # 解法1 动态规划
         # # 莱文斯坦距离
+        # # 解法1 动态规划
         # # todo 定义状态dp[i][j], 缩小问题规模, 看转移到dp[i][j]需要什么样的状态, 不用考虑将来的状态
         # # 缩小问题规模很重要, 状态定义其实是缩小问题规模后的直接答案
         # if not word1 or not word2: return len(word1) or len(word2)
@@ -60,16 +60,43 @@ class Solution:
         if not word1 or not word2: return len(word1) or len(word2)
 
         def _dfs(i, j):
+            # terminator
             if i == len(word1): return len(word2) - j
             if j == len(word2): return len(word1) - i
 
+            # check cache
             if (i, j) in memo: return memo[(i, j)]
+            # process & drill down
             if word1[i] == word2[j]:
                 memo[(i, j)] = _dfs(i + 1, j + 1)
             else:
                 memo[(i, j)] = 1 + min(_dfs(i, j + 1), _dfs(i + 1, j), _dfs(i + 1, j + 1))
+            # reverse state
             return memo[(i, j)]
 
         memo = {}
         ans = _dfs(0, 0)
         return ans
+
+        # # 解法2.1 DFS+缓存
+        # if not word1 or not word2: return len(word1) or len(word2)
+        #
+        # def _dfs(i, j):
+        #     # terminator
+        #     if i == len(word1) or j == len(word2):
+        #         return (len(word1) - i) or (len(word2) - j)
+        #     # check cache
+        #     if (i, j) in memo:
+        #         return memo[(i, j)]
+        #
+        #     # process & drill down
+        #     if word1[i] == word2[j]:
+        #         memo[(i, j)] = _dfs(i + 1, j + 1)
+        #     else:
+        #         memo[(i, j)] = 1 + min(_dfs(i + 1, j), _dfs(i, j + 1), _dfs(i + 1, j + 1))
+        #     # reverse state
+        #     return memo[(i, j)]
+        #
+        # memo = {}
+        # ans = _dfs(0, 0)
+        # return ans

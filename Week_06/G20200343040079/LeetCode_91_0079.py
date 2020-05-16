@@ -45,17 +45,17 @@ class Solution:
         # memo = {}
         # return _dfs(0)
 
-        # 解法2 动态规划, dp[i] = dp[i-1] + (dp[i-2] if i与i-1合并 else 0)
+        # 解法2 动态规划
         if not s or s[0] == '0': return 0
         dp = [0] * (len(s) + 1)
         dp[0] = dp[-1] = 1
 
         for i in range(1, len(s)):
-            if s[i] == '0':
+            if s[i] == '0':                 # 必需得和前一个合并
                 dp[i] = dp[i - 2] if s[i - 1] in ('1', '2') else 0
-            elif s[i - 1] == '1' or s[i - 1] == '2' and s[i] <= '6':
+            elif s[i - 1] == '1' or s[i - 1] == '2' and s[i] <= '6':    # 可组合 或 不组合
                 dp[i] = dp[i - 1] + dp[i - 2]
-            else:
+            else:                           # 不能和前一个组合
                 dp[i] = dp[i - 1]
         return dp[-2]
 

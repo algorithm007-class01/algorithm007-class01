@@ -32,26 +32,38 @@ from typing import List
 
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        # # 解法1 动态规划
+        # # 解法1.1 动态规划
+        # # 定义dp状态, dp[i][0] -> 第i天没有偷, dp[i][1] -> 第i天偷了
+        # # 递推公式:
+        # # dp[i][0] = max(dp[i-1][0], dp[i-1][1])
+        # # dp[i][1] = dp[i-1][0] + nums[i]
+        # if not nums: return 0
+        # dp = [[0] * 2 for _ in range(len(nums))]
+        # for i, n in enumerate(nums):
+        #     dp[i][0] = max(dp[i-1])
+        #     dp[i][1] = dp[i-1][0] + n
+        # return max(dp[-1])
+
+        # 解法1.2 动态规划 & 状态压缩
+        if not nums: return 0
+        dp = [0, 0]                 # 0不抢, 1抢
+        for i in range(len(nums)):
+            dp = [max(dp), dp[0] + nums[i]]
+        return max(dp)
+
+        # # 解法1.3 动态规划, 定义另一种动态递推公式
+        # # 用两个变量进行递推, 不如前两种具有通用性
+        # # 递推公式: dp[i] = max(dp[i-2] + nums[i], dp[i-1])
         # if not nums: return 0
         # f1 = 0
         # f2 = nums[0]
         # for i in range(1, len(nums)):
         #     f2, f1 = max(nums[i] + f1, f2), f2
-        #
         # return f2
-
-        # 解法1.1 动态规划
-        if not nums: return 0
-        dp = [0, 0]     # index=0不抢, index=1抢
-        for i in range(len(nums)):
-            dp = [max(dp), dp[0] + nums[i]]
-        return max(dp)
 
         # # 解法2 回溯 超时
         # if not nums: return 0
         # if len(nums) <= 2: return max(nums)
-        #
         # # 抢 | 不抢
         # return max(nums[0] + self.rob(nums[2:]), self.rob(nums[1:]))
 
@@ -61,13 +73,29 @@ class Solution:
         # def _rob(i):
         #     if i >= len(nums): return 0
         #     if i in memo: return memo[i]
-        #
         #     # 抢 | 不抢
         #     memo[i] = max(nums[i] + _rob(i + 2), _rob(i + 1))
         #     return memo[i]
         #
         # memo = {}
         # ans = _rob(0)
+        # return ans
+
+        # # 解法2.2 DFS + 记忆化缓存, 带完整注释
+        # if not nums: return 0
+        # def _dfs(i):
+        #     # terminator
+        #     if i >= len(nums): return 0
+        #     # check cache
+        #     if i in memo:
+        #         return memo[i]
+        #     # process & drill down
+        #     memo[i] = max(nums[i] + _dfs(i + 2), _dfs(i + 1))
+        #     # reverse state
+        #     return memo[i]
+        #
+        # memo = {}
+        # ans = _dfs(0)
         # return ans
 
 

@@ -28,6 +28,10 @@ from typing import List
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
 
+        # 解法1 动态规划
+        # 定义状态 dp[i][j] = minPath(A[0->i][0->j])
+        # dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + A[i][j]
+
         if not grid or not grid[0]: return 0
         rows, cols = len(grid), len(grid[0])
         for i in range(1, rows):

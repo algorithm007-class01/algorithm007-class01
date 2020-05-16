@@ -34,12 +34,12 @@ class Solution:
         #     ans = max(ans, (right_bound - left_bound - 1)*heights[i])
         # return ans
 
-        # 解法2，stack
+        # 解法2 单调递增栈 stack
         # 栈中元素从小到大排列，目的为了可以直接获取到当前栈顶元素的左右边界
         if not heights: return 0
         from collections import deque
-        stack = deque([-1])
-        heights.append(0)
+        stack = deque([-1])     # 哨兵
+        heights.append(0)       # 哨兵
         ans = 0
         for i in range(len(heights)):
             while heights[i] < heights[stack[-1]]:

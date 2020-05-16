@@ -44,23 +44,42 @@ class Solution:
         # # 解法1.1 动态规划, 将大问题化解为子问题、子子问题, 寻找大问题和子问题之间可以递推的公式
         # # 然后根据子问题的直观解逐步推导大问题的解
         # if m <= 0 or n <= 0: return 0
-        # dp = [1] * m    # 状态压缩
+        # dp = [1] * m              # 状态压缩, 节省空间
         # for i in range(1, n):
         #     for j in range(1, m):
         #         dp[j] = dp[j] + dp[j - 1]
         # return dp[-1]
 
-        # 解法2 递归+缓存
-        if m <= 0 or n <= 0: return 0
+        # # 解法2 递归 + 记忆缓存
+        # if m <= 0 or n <= 0: return 0
+        #
+        # def _traverse(i, j):
+        #     if i == n - 1 or j == m - 1: return 1
+        #     if (i, j) in memo: return memo[(i, j)]
+        #     memo[(i, j)] = _traverse(i + 1, j) + _traverse(i, j + 1)
+        #     return memo[(i, j)]
+        #
+        # memo = {}
+        # ans = _traverse(0, 0)
+        # return ans
 
-        def _traverse(i, j):
-            if i == n - 1 or j == m - 1: return 1
-            if (i, j) in memo: return memo[(i, j)]
-            memo[(i, j)] = _traverse(i + 1, j) + _traverse(i, j + 1)
-            return memo[(i, j)]
+        # 解法2.1 递归 + 记忆缓存
+        if m <= 1 or n <= 1: return 1
+
+        def _dfs(m, n):
+            # terminator
+            if m < 1 or n < 1: return 0
+            if m == 1 or n == 1: return 1   # todo 注意m, n的取值和对应网格关系
+            # check cache
+            if (m, n) in memo:
+                return memo[(m, n)]
+            # process & drill down
+            memo[(m, n)] = _dfs(m - 1, n) + _dfs(m, n - 1)
+            # reverse state
+            return memo[(m, n)]
 
         memo = {}
-        ans = _traverse(0, 0)
+        ans = _dfs(m, n)
         return ans
 
 
