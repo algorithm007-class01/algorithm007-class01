@@ -1,5 +1,3 @@
-package rotation.one.week.nine;
-
 import java.util.Stack;
 
 public class LeetCode_917_0145 {

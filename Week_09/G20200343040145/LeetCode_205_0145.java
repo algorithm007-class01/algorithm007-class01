@@ -1,5 +1,3 @@
-package rotation.one.week.nine;
-
 import java.util.HashMap;
 
 public class LeetCode_205_0145 {

@@ -1,5 +1,3 @@
-package rotation.one.week.nine;
-
 public class LeetCode_680_0145 {
     public boolean validPalindrome(String s) {
         char[] chArr = s.toCharArray();
