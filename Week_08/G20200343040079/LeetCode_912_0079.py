@@ -64,6 +64,20 @@ class Solution:
                 start += 1
         return start - 1
 
+    def _partition2(self, nums, start, end):
+        """分区函数 LL"""
+        if start >= end: return start
+        from random import randint
+        index = randint(start, end)
+        nums[index], nums[end] = nums[end], nums[index]
+
+        for i in range(start, end):
+            if nums[i] < nums[end]:
+                nums[i], nums[start] = nums[start], nums[i]
+                start += 1
+        nums[start], nums[end] = nums[end], nums[start]
+        return start
+
     def mergeSort(self, nums: List[int]) -> List[int]:
         if len(nums) <= 1: return nums
 

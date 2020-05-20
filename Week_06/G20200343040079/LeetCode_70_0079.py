@@ -29,6 +29,13 @@ Explanation: There are three ways to climb to the top.
 
 class Solution:
     def climbStairs(self, n: int) -> int:
+        # # 解法1 动态规划, 不进行状态压缩
+        # if n < 0: return 0
+        # dp = [1] * (n + 1)
+        # for i in range(2, n + 1):
+        #     dp[i] = dp[i-1] + dp[i-2]
+        # return dp[-1]
+
         # # 解法1 动态递推
         # if n <= 0: return 0
         # a, b = 0, 1
@@ -42,9 +49,12 @@ class Solution:
             if n < 0: return 0
             if 0 <= n <= 1: return 1
             # check cache
-            if n in memo: return memo[n]
+            if n in memo:
+                return memo[n]
+
             # process & drill down
             memo[n] = _dfs(n - 1) + _dfs(n - 2)
+            # reverse state
             return memo[n]
 
         memo = {}

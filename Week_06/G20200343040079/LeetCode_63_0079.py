@@ -52,7 +52,7 @@ class Solution:
         #             obstacleGrid[i][j] = obstacleGrid[i - 1][j] + obstacleGrid[i][j - 1]
         # return obstacleGrid[-1][-1]
 
-        # # 解法2 动态规划简洁写法
+        # # 解法2 动态规划简洁写法: 状态压缩
         # m, n = len(obstacleGrid[0]), len(obstacleGrid)
         # dp = [1] + [0]*m
         # for i in range(0, n):
