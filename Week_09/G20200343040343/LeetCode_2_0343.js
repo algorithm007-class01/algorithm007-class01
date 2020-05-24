@@ -7,4 +7,4 @@ var reverseStr = function (s, k) {
     isReverse = !isReverse
   }
   return result
-}
+} 
